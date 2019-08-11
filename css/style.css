@@ -1,0 +1,169 @@
+@font-face {
+	font-family: "scmagic";
+	src: url("scmagic.ttf");
+}
+* {
+	box-sizing: border-box;
+	font-family: "scmagic";
+}
+
+html,body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+#card-selection {
+	display: flex;
+	flex-wrap: wrap;
+}
+#card-selection:before, #card-selection:after {
+	width: 0;
+}
+.card-thumb {
+	max-width: 64px;
+	max-height: 76.24px;
+	flex-wrap: wrap;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	cursor: pointer;
+	transition: filter 0.2s transform 0.2s;
+	-webkit-transition: -webkit-filter 0.2s -webkit-transform 0.2s;
+}
+.card-thumb:hover, .card-thumb.active {
+	-webkit-filter: none; /* Safari 6.0 - 9.0 */
+	filter: none;
+	transform: scale(1.25);
+	-webkit-transform: scale(1.25);
+	z-index:100;
+}
+.card-thumb:before, .card-thumb:after {
+	width: 0;
+}
+@media screen and (min-width:450px) {
+	.card-thumb {
+		max-width: 64px;
+	}
+}
+#loading {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.centered {
+	margin: auto;
+	font-size: 3rem;
+	color: #FEFEFE;
+	max-width: 50%;
+}
+#card-selection {
+	width: 100%;
+}
+.elixir-select {
+	background: #369;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	padding-bottom: 0.5rem;
+	margin-bottom: 1rem;
+}
+.elixir-select p {
+	color: #FEFEFE;
+}
+#card-selector {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: 1rem;
+}
+section > p {
+	text-align: center;
+	margin: 0;
+	padding: 1rem;
+}
+.lix-filter-wrapper {
+	background: #999;
+	border-radius: 5rem;
+	margin: 0 0.125rem;
+	flex-wrap: wrap;
+}
+.lix-filter-wrapper.active, .lix-filter-wrapper.active:hover {
+	background: #368BC1;
+}
+.lix-filter-wrapper:hover {
+	background: #AAA;
+}
+.lix-filter-icon {
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: #FEFEFE;
+	min-width: 2rem;
+	text-align: center;
+	min-width: 38px;
+	cursor: pointer;
+}
+#card-data-table {
+	text-align: center;
+	display: none;
+}
+
+td {
+	padding: 0 1rem;
+
+}
+th {
+	background: #369;
+	margin: 0;
+	color: #FEFEFE;
+}
+th.sorting-asc,th.sorting-desc {
+	background: #69D;
+}
+th, td {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+#card-data-table tbody tr:nth-child(even) {
+	background: #EEE;
+}
+#card-data-table tbody tr:nth-child(even) {
+	background: #DEF;
+}
+.form-radio
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+.form-radio:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.form-radio:hover
+{
+     background-color: #f7f7f7;
+}
+.form-radio:checked
+{
+     background-color: #f1f1f1;
+}
